@@ -3,6 +3,7 @@
 
 #include <escher.h>
 #include "debug_controller.h"
+#include "../shared/shared_app.h"
 
 namespace Debug {
 
@@ -15,7 +16,7 @@ public:
     const Image* icon() override;
   };
 
-  class Snapshot : public ::App::Snapshot {
+  class Snapshot : public ::SharedApp::Snapshot {
   public:
     Snapshot();
     App* unpack(Container* container) override;
@@ -24,7 +25,7 @@ public:
   };
 
 private:
-  App(Snapshot* snapshot);
+  App(Snapshot * snapshot);
   DebugController m_debugController;
 };
 

@@ -4,8 +4,8 @@
 
 namespace Debug {
 
-DebugController::DebugController(Responder* parentResponder) :
-  ViewController(parentResponder)
+DebugController::DebugController() :
+  ViewController(nullptr)
   {
   }
 

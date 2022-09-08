@@ -22,14 +22,13 @@ const Image* App::Descriptor::icon() {
   return ImageStore::DebugIcon;
 }
 
-App::Descriptor* App::Snapshot::descriptor() {
+
+App::Descriptor * App::Snapshot::descriptor() {
   static Descriptor descriptor;
   return &descriptor;
 }
 
-App::App(Snapshot* snapshot) :
+App::App(Snapshot * snapshot) :
   ::App(snapshot, &m_debugController)
 {
-}
-
 }
