@@ -7,7 +7,7 @@
 namespace Debug {
 
 I18n::Message App::Descriptor::name() {
-  return upperName();
+  return I18n::Message::DebugApp;
 }
 
 I18n::Message App::Descriptor::upperName() {

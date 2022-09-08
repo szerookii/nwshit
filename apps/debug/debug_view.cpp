@@ -7,9 +7,9 @@ DebugView::DebugView() :
   View(),
   m_bufferTextView(KDFont::LargeFont, 0.5, 0.5, KDColorBlack),
   m_color(3),
-  m_kdcolor(Palette::GrayWhite)
+  m_kdcolor(Palette::Cyan)
 {
-  m_bufferTextView.setText(I18n::translate(I18n::Message::DebugAppCapital));
+  m_bufferTextView.setText("Kalvin sale pd");
 }
 
 void DebugView::drawRect(KDContext * ctx, KDRect rect) const {
@@ -19,19 +19,19 @@ void DebugView::drawRect(KDContext * ctx, KDRect rect) const {
 void DebugView::reload() {
   switch (m_color) {
     case 0:
-      m_kdcolor = Palette::GrayDark;
+      m_kdcolor = Palette::Cyan;
       break;
 
     case 1:
-      m_kdcolor = Palette::GrayMiddle;
+      m_kdcolor = Palette::PurpleBright;
       break;
 
     case 2:
-      m_kdcolor = Palette::GrayBright;
+      m_kdcolor = Palette::YellowLight;
       break;
       
     default:
-      m_kdcolor = Palette::GrayWhite;
+      m_kdcolor = Palette::Pink;
   }
 
   m_bufferTextView.setBackgroundColor(m_kdcolor);
