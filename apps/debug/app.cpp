@@ -14,21 +14,23 @@ I18n::Message App::Descriptor::upperName() {
   return I18n::Message::DebugAppCapital;
 }
 
-App* App::Snapshot::unpack(Container* container) {
-  return new (container->currentAppBuffer()) App(this);
-}
-
 const Image* App::Descriptor::icon() {
   return ImageStore::DebugIcon;
 }
 
-
-App::Descriptor * App::Snapshot::descriptor() {
+App::Descriptor* App::Snapshot::descriptor() {
   static Descriptor descriptor;
   return &descriptor;
 }
 
-App::App(Snapshot * snapshot) :
+App* App::Snapshot::unpack(Container* container) {
+  return new (container->currentAppBuffer()) App(this);
+}
+
+void App::Snapshot::reset() {
+}
+
+App::App(Snapshot* snapshot) :
   ::App(snapshot, &m_debugController)
 {
 }

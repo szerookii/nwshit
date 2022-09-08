@@ -16,16 +16,15 @@ public:
     const Image* icon() override;
   };
 
-  class Snapshot : public ::SharedApp::Snapshot {
+  class Snapshot : public ::App::Snapshot {
   public:
-    Snapshot();
     App* unpack(Container* container) override;
-    void reset() override;
     Descriptor* descriptor() override;
+    void reset() override;
   };
 
 private:
-  App(Snapshot * snapshot);
+  App(Snapshot* snapshot);
   DebugController m_debugController;
 };
 
