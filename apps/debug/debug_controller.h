@@ -8,7 +8,7 @@ namespace Debug {
 
 class DebugController : public ViewController {
 public:
-  DebugController(Responder* parentResponder);
+  DebugController();
   View* view() override;
   bool handleEvent(Ion::Events::Event event) override;
   void didBecomeFirstResponder() override;

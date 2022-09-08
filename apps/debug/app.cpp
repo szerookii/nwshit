@@ -32,3 +32,5 @@ App::App(Snapshot * snapshot) :
   ::App(snapshot, &m_debugController)
 {
 }
+
+}
