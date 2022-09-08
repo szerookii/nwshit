@@ -21,12 +21,15 @@ void DebugView::reload() {
     case 0:
       m_kdcolor = Palette::GreyDark;
       break;
+
     case 1:
       m_kdcolor = Palette::GreyMiddle;
       break;
+
     case 2:
       m_kdcolor = Palette::GreyBright;
       break;
+      
     default:
       m_kdcolor = Palette::GreyWhite;
   }
@@ -38,6 +41,7 @@ void DebugView::reload() {
 
 void DebugView::changeColor() {
   m_color++;
+
   if (m_color > 3)
     m_color = 0;
 

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef DEBUG_DEBUG_VIEW_H
+#define DEBUG_DEBUG_VIEW_H
 
 #include <escher.h>
 
@@ -19,4 +20,7 @@ private:
   int m_color;
   KDColor m_kdcolor;
 };
+
 }
+
+#endif

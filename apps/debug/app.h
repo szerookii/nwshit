@@ -1,7 +1,7 @@
-#pragma once
+#ifndef DEBUG_APP_H
+#define DEBUG_APP_H
 
-#include "escher/include/escher/app.h"
-#include "../shared/shared_app.h"
+#include <escher.h>
 #include "debug_controller.h"
 
 namespace Debug {
@@ -12,18 +12,22 @@ public:
   public:
     I18n::Message name() override;
     I18n::Message upperName() override;
+    const Image* icon() override;
   };
 
-  class Snapshot : public ::SharedApp::Snapshot {
+  class Snapshot : public ::App::Snapshot {
   public:
+    Snapshot();
     App* unpack(Container* container) override;
-    Descriptor * descriptor() override;
+    void reset() override;
+    Descriptor* descriptor() override;
   };
-
-  bool processEvent(Ion::Events::Event) override;
 
 private:
   App(Snapshot* snapshot);
   DebugController m_debugController;
 };
+
 }
+
+#endif

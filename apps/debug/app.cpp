@@ -1,6 +1,8 @@
 #include "app.h"
+#include "apps/apps_container.h"
 #include <apps/i18n.h>
 #include <assert.h>
+#include "debug_icon.h"
 
 namespace Debug {
 
@@ -16,6 +18,10 @@ App* App::Snapshot::unpack(Container* container) {
   return new (container->currentAppBuffer()) App(this);
 }
 
+const Image* App::Descriptor::icon() {
+  return ImageStore::DebugIcon;
+}
+
 App::Descriptor* App::Snapshot::descriptor() {
   static Descriptor descriptor;
   return &descriptor;
@@ -24,10 +30,6 @@ App::Descriptor* App::Snapshot::descriptor() {
 App::App(Snapshot* snapshot) :
   ::App(snapshot, &m_debugController)
 {
-}
-
-bool App::processEvent(Ion::Events::Event e) {
-  return false;
 }
 
 }

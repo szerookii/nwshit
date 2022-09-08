@@ -5,7 +5,9 @@
 namespace Debug {
 
 DebugController::DebugController(Responder* parentResponder) :
-  ViewController(parentResponder) {}
+  ViewController(parentResponder)
+  {
+  }
 
 View* DebugController::view() {
   return &m_debugView;

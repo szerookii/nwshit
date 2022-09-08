@@ -1,7 +1,7 @@
-#pragma once
+#ifndef DEBUG_DEBUG_CONTROLLER_H
+#define DEBUG_DEBUG_CONTROLLER_H
 
 #include <escher.h>
-
 #include "debug_view.h"
 
 namespace Debug {
@@ -18,4 +18,6 @@ private:
 };
 
 }
+
+#endif
 
