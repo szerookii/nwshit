@@ -1,6 +1,10 @@
 #include "debug_view.h"
 #include "apps/i18n.h"
 
+#ifdef DEVICE
+#include <ion/src/device/shared/drivers/timing.h>>
+#endif
+
 namespace Debug {
 
 DebugView::DebugView() :
