@@ -17,7 +17,7 @@ void DebugController::didBecomeFirstResponder() {
 }
 
 bool DebugController::handleEvent(Ion::Events::Event event) {
-  if (event == Ion::Events::OK || event == Ion::Events::EXE || event == Ion::Events::None) {
+  if (event == Ion::Events::OK || event == Ion::Events::EXE || event == Ion::Events::TimerFire || event == Ion::Events::None) {
     m_debugView.changeColor();
     return true;
   }
