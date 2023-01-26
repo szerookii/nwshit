@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: 'recursive'
-      - run: make -j2 MODEL=n0110 binpack
+      - run: make OMEGA_USERNAME="szeroki" -j4
       - run: cp output/release/device/n0110/binpack-n0110-`git rev-parse HEAD | head -c 7`.tgz output/release/device/n0110/binpack-n0110.tgz
       - uses: actions/upload-artifact@master
         with:
