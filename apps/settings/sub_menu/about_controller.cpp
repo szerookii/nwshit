@@ -35,10 +35,9 @@ AboutController::AboutController(Responder * parentResponder) :
 
 bool AboutController::handleEvent(Ion::Events::Event event) {
   I18n::Message childLabel = m_messageTreeModel->childAtIndex(selectedRow()+(!hasUsernameCell()))->label();
-  /* We hide here the activation hardware test app: in the menu "about", by
-   * clicking on '6' on the last row. */
+  // some shit around exam mode lmao
   if ((event == Ion::Events::Six || event == Ion::Events::LowerT || event == Ion::Events::UpperT) && childLabel == I18n::Message::FccId) {
-    Container::activeApp()->displayExamModePopUp(GlobalPreferences::ExamMode::Off)
+    AppsContainer::sharedAppsContainer()->displayExamModePopUp(GlobalPreferences::ExamMode::Off);
     return true;
   }
   if (event == Ion::Events::OK || event == Ion::Events::EXE || event == Ion::Events::Right) {
