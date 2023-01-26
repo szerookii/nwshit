@@ -6,7 +6,8 @@ using namespace Shared;
 namespace Settings {
 
 int ExamModeController::numberOfCautionLines() const {
-  return k_numberOfCautionMessageLines;
+  return 0;
+  //return k_numberOfCautionMessageLines;
 }
 
 }

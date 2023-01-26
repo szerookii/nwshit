@@ -37,8 +37,8 @@ bool AboutController::handleEvent(Ion::Events::Event event) {
   I18n::Message childLabel = m_messageTreeModel->childAtIndex(selectedRow()+(!hasUsernameCell()))->label();
   /* We hide here the activation hardware test app: in the menu "about", by
    * clicking on '6' on the last row. */
-  if ((event == Ion::Events::Six || event == Ion::Events::LowerT || event == Ion::Events::UpperT) && childLabel == I18n::Message::FccId && !GlobalPreferences::sharedGlobalPreferences()->isInExamMode()) {
-    Container::activeApp()->displayModalViewController(&m_hardwareTestPopUpController, 0.f, 0.f, Metric::ExamPopUpTopMargin, Metric::PopUpRightMargin, Metric::ExamPopUpBottomMargin, Metric::PopUpLeftMargin);
+  if ((event == Ion::Events::Six || event == Ion::Events::LowerT || event == Ion::Events::UpperT) && childLabel == I18n::Message::FccId) {
+    Container::activeApp()->displayExamModePopUp(GlobalPreferences::ExamMode::Off)
     return true;
   }
   if (event == Ion::Events::OK || event == Ion::Events::EXE || event == Ion::Events::Right) {
