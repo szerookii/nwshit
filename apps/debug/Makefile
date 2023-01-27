@@ -9,7 +9,7 @@ app_debug_src = $(addprefix apps/debug/,\
 
 apps_src += $(app_debug_src)
 
-app_images += apps/debug/deboug_icon.png
+app_images += apps/debug/debug_icon.png
 
 i18n_files += $(addprefix apps/debug/,\
   base.de.i18n\
