@@ -10,10 +10,17 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: recursive
+
       - run: make OMEGA_USERNAME="szeroki" -j4
+
       - uses: actions/upload-artifact@v3
         with:
-          name: release
-          path: output/release/
+          name: epsilon.onboarding.A.bin
+          path: output/release/device/bootloader/epsilon.onboarding.A.bin
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: epsilon.onboarding.B.bin
+          path: output/release/device/bootloader/epsilon.onboarding.B.bin
 env:
   ACCEPT_OFFICIAL_TOS: 1
