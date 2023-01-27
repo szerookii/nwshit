@@ -3,7 +3,6 @@
     "apps/on_boarding/logo_icon.png" : "logo_icon.png",
     
     "apps/debug/debug_icon.png" : "apps/debug_icon.png",
-    "apps/doom/doom_icon.png" : "apps/doom_icon.png",
     "apps/atomic/atomic_icon.png" : "apps/atomic_icon.png",
     "apps/calculation/calculation_icon.png" : "apps/calculation_icon.png",
     "apps/code/code_icon.png" : "apps/code_icon.png",
