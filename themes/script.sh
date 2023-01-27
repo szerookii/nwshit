@@ -40,9 +40,9 @@ if [ $(which inkscape | wc -l) -ge 1 ]; then
   inkscape ./generated_icons.svg -o $dir/apps/sequence_icon.png --export-area=160:173:215:229
   inkscape ./generated_icons.svg -o $dir/apps/graph_icon.png --export-area=160:0:215:56
   inkscape ./generated_icons.svg -o $dir/apps/regression_icon.png --export-area=0:258:55:314
-  inkscape ./generated_icons.svg -o $dir/apps/settings_icon.png --export-area=80:258:135:314
+  #inkscape ./generated_icons.svg -o $dir/apps/settings_icon.png --export-area=80:258:135:314
   inkscape ./generated_icons.svg -o $dir/apps/external_icon.png --export-area=160:258:215:314
-#  inkscape ./generated_icons.svg -o $dir/apps/xcas_icon.png --export-area=80:342:135:398
+  #inkscape ./generated_icons.svg -o $dir/apps/xcas_icon.png --export-area=80:342:135:398
   inkscape ./generated_icons.svg -o $dir/apps/reader_icon.png --export-area=160:342:215:398
   inkscape ./generated_icons.svg -o $dir/probability/binomial_icon.png --export-area=273:0:308:19
   inkscape ./generated_icons.svg -o $dir/probability/chi_squared_icon.png --export-area=273:29:308:48
